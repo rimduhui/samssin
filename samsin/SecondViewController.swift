@@ -28,7 +28,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor(red: 0.94, green: 0.28, blue: 0.26, alpha: 1)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "board.png")!)
+        //self.view.layer.contents = UIImage(named: "board.png")?.CGImage
         
         var width : CGFloat = self.view.frame.size.width;
         var height : CGFloat = self.view.frame.size.height;
@@ -41,8 +42,8 @@ class SecondViewController: UIViewController {
                 
                 stageBtn.frame.size.width = 24;
                 stageBtn.frame.size.height = 24;
-                stageBtn.frame.origin.x = 20 + 25 * (x % 15);
-                stageBtn.frame.origin.y = 100 + (height/15 + 25*y);
+                stageBtn.frame.origin.x = 13 + 25.8 * (x % 15);
+                stageBtn.frame.origin.y = 93 + (height/15 + 25.8*y);
                 stageBtn.backgroundColor = UIColor(red:0.78, green:0.21, blue:0.19, alpha: 1);
                 stageBtn.layer.cornerRadius = 24;
                 

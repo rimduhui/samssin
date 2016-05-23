@@ -131,13 +131,62 @@
                     <view key="view" contentMode="scaleToFill" id="2Ce-dV-Q71">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="SOY-BT-dmR">
+                                <rect key="frame" x="0.0" y="-364" width="368" height="364"/>
+                                <color key="backgroundColor" red="0.79703575372695923" green="0.59114927053451538" blue="0.25628441572189331" alpha="0.2541217672413793" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="368" height="364"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IML-qZ-QNi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="undo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-DZ-5Ug">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="redo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kMp-gM-oqT" firstAttribute="top" secondItem="IML-qZ-QNi" secondAttribute="bottom" constant="100" id="2HT-oA-zco"/>
+                            <constraint firstItem="POw-DZ-5Ug" firstAttribute="leading" secondItem="IML-qZ-QNi" secondAttribute="trailing" constant="15" id="bed-7h-Shv"/>
+                            <constraint firstItem="IML-qZ-QNi" firstAttribute="leading" secondItem="2Ce-dV-Q71" secondAttribute="leadingMargin" constant="15" id="chj-94-mDe"/>
+                            <constraint firstItem="POw-DZ-5Ug" firstAttribute="centerY" secondItem="IML-qZ-QNi" secondAttribute="centerY" id="wyw-h0-NN2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SOY-BT-dmR"/>
+                                <exclude reference="IML-qZ-QNi"/>
+                                <exclude reference="POw-DZ-5Ug"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="chj-94-mDe"/>
+                                <exclude reference="bed-7h-Shv"/>
+                                <exclude reference="wyw-h0-NN2"/>
+                                <exclude reference="2HT-oA-zco"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SOY-BT-dmR"/>
+                                <include reference="IML-qZ-QNi"/>
+                                <include reference="POw-DZ-5Ug"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="chj-94-mDe"/>
+                                <include reference="bed-7h-Shv"/>
+                                <include reference="wyw-h0-NN2"/>
+                                <include reference="2HT-oA-zco"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="PlB-FO-L01"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fu-lP-DfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915.5" y="432"/>
+            <point key="canvasLocation" x="1740" y="186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uDK-wc-6VD">
@@ -160,6 +209,7 @@
     </scenes>
     <resources>
         <image name="Image" width="542" height="720"/>
+        <image name="board" width="368" height="364"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DKE-D3-2Vb"/>

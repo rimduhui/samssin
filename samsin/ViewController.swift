@@ -37,6 +37,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    //    CGContextRef ctx = UIGraphicsGetCurrentContext();
+     //   CGContextSetRGBFillColor(ctx, 0.0, 1.0, 0.0, 1.0);
+      //  CGContextFillEllipseInRect(ctx, CGReckMake(100,100,25,25))
         BlackButton.addTarget(self, action: "touchBtn1:", forControlEvents: UIControlEvents.TouchDown);
         WhiteButton.addTarget(self, action: "touchBtn2:", forControlEvents: UIControlEvents.TouchDown);
     }

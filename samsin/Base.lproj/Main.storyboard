@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KOZ-2i-e2z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Samsin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="samsin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,150 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-a8-9bE">
+                                <rect key="frame" x="0.0" y="-720" width="542" height="720"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlp-oQ-PU3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="백">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1pR-ME-X90" kind="show" id="7D6-wM-1mk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-58-6tf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="흑">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1pR-ME-X90" kind="show" id="DKE-D3-2Vb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삼씬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEG-Kf-m8z">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jlp-oQ-PU3" secondAttribute="trailing" constant="50" id="0Qw-3P-cBs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEG-Kf-m8z" secondAttribute="trailing" constant="100" id="33c-Kw-KIr"/>
+                            <constraint firstItem="bEG-Kf-m8z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="8a4-ek-RIp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="bEG-Kf-m8z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="BKH-bX-p71"/>
+                            <constraint firstItem="gGN-a8-9bE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="NTD-JR-cpH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gGN-a8-9bE" secondAttribute="trailing" constant="-20" id="OrR-Ak-7qU"/>
+                            <constraint firstItem="TVY-58-6tf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="T3V-Ou-UQo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jlp-oQ-PU3" secondAttribute="bottom" constant="200" id="TCG-8h-TLb"/>
+                            <constraint firstItem="gGN-a8-9bE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="b3X-kK-ouX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gGN-a8-9bE" secondAttribute="bottom" id="wbR-RF-yjT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TVY-58-6tf" secondAttribute="bottom" constant="200" id="zCw-4W-kfw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gGN-a8-9bE"/>
+                                <exclude reference="jlp-oQ-PU3"/>
+                                <exclude reference="TVY-58-6tf"/>
+                                <exclude reference="bEG-Kf-m8z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NTD-JR-cpH"/>
+                                <exclude reference="OrR-Ak-7qU"/>
+                                <exclude reference="b3X-kK-ouX"/>
+                                <exclude reference="TCG-8h-TLb"/>
+                                <exclude reference="wbR-RF-yjT"/>
+                                <exclude reference="zCw-4W-kfw"/>
+                                <exclude reference="T3V-Ou-UQo"/>
+                                <exclude reference="0Qw-3P-cBs"/>
+                                <exclude reference="33c-Kw-KIr"/>
+                                <exclude reference="8a4-ek-RIp"/>
+                                <exclude reference="BKH-bX-p71"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gGN-a8-9bE"/>
+                                <include reference="jlp-oQ-PU3"/>
+                                <include reference="TVY-58-6tf"/>
+                                <include reference="bEG-Kf-m8z"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NTD-JR-cpH"/>
+                                <include reference="OrR-Ak-7qU"/>
+                                <include reference="b3X-kK-ouX"/>
+                                <include reference="TCG-8h-TLb"/>
+                                <include reference="wbR-RF-yjT"/>
+                                <include reference="zCw-4W-kfw"/>
+                                <include reference="T3V-Ou-UQo"/>
+                                <include reference="0Qw-3P-cBs"/>
+                                <include reference="33c-Kw-KIr"/>
+                                <include reference="8a4-ek-RIp"/>
+                                <include reference="BKH-bX-p71"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Samsin" id="Oue-Yw-UND">
+                        <barButtonItem key="backBarButtonItem" title=" Back" id="aal-NE-hrQ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BlackButton" destination="TVY-58-6tf" id="Uc9-Wp-1G8"/>
+                        <outlet property="WhiteButton" destination="jlp-oQ-PU3" id="3DB-e1-Kjq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1143" y="364.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="gyR-Xb-IBr">
+            <objects>
+                <viewController id="1pR-ME-X90" customClass="SecondViewController" customModule="samsin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M2P-Po-GPc"/>
+                        <viewControllerLayoutGuide type="bottom" id="kMp-gM-oqT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ce-dV-Q71">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PlB-FO-L01"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fu-lP-DfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.5" y="432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uDK-wc-6VD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOZ-2i-e2z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cX8-NY-TDy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eWO-HB-0rC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kly-k3-0dE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="364.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="542" height="720"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DKE-D3-2Vb"/>
+    </inferredMetricsTieBreakers>
 </document>
